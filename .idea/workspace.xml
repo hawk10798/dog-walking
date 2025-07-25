@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4136e706-55fd-4913-91fd-5e6056003591" name="Changes" comment="Make project pages nicer">
+    <list default="true" id="4136e706-55fd-4913-91fd-5e6056003591" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/cms.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ecommerce.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/restful_api.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/default.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stop.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cms.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/cms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ecommerce.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/ecommerce.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/restful_api.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/restful_api.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful_api.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +51,8 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "56d12135",
+    "SHELLCHECK.PATH": "/Users/harry.hawkesford/Library/Application Support/JetBrains/PhpStorm2025.1/plugins/Shell Script/shellcheck",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/harry.hawkesford/personal_code/portfolio",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -69,15 +78,14 @@
       <option name="presentableId" value="Default" />
       <updated>1752222339154</updated>
       <workItem from="1752222340221" duration="1251000" />
-      <workItem from="1752237597483" duration="29000" />
+      <workItem from="1752237597483" duration="1237000" />
+      <workItem from="1753454447977" duration="137000" />
+      <workItem from="1753454613225" duration="4000" />
+      <workItem from="1753454788865" duration="767000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Make project pages nicer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make project pages nicer" />
   </component>
 </project>
