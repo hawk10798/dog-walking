@@ -1,7 +1,5 @@
 #!/bin/bash
-# Stop and remove the portfolio-static container if running
-docker stop portfolio-static 2>/dev/null
-docker rm portfolio-static 2>/dev/null
+# Stop and remove the dog-walking container if running
+docker-compose down
 
-echo "Stopped and removed portfolio-static container."
-
+echo "Stopped and removed dog-walking container."

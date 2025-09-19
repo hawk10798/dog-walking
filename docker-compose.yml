@@ -3,4 +3,10 @@ services:
   web:
     build: .
     ports:
-      - "1191:80"
+      - "8080:80"
+    #Mounts local app directory to container,
+    #so changes made locally are reflected in
+    #the container without rebuilding
+    volumes:
+      - ./app:/usr/share/nginx/html
+
