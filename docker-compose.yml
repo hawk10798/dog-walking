@@ -8,5 +8,7 @@ services:
     #so changes made locally are reflected in
     #the container without rebuilding
     volumes:
-      - ./app:/usr/share/nginx/html
-
+      - ./app/index.html:/usr/share/nginx/html/index.html
+      - ./app/app.js:/usr/share/nginx/html/js/app.js
+      - ./app/style.css:/usr/share/nginx/html/css/style.css
+      - ./app/images:/usr/share/nginx/html/images

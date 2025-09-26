@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4136e706-55fd-4913-91fd-5e6056003591" name="Changes" comment="add docker-compose file, simplify dockerfile">
+    <list default="true" id="4136e706-55fd-4913-91fd-5e6056003591" name="Changes" comment="Pivot to dog-walking site, update dockerfile, docker-compose.yml and nginx config">
+      <change afterPath="$PROJECT_DIR$/app/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/images/dog-walkers.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/images/walker-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/images/walker-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cms.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ecommerce.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/restful_api.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stop.sh" beforeDir="false" afterPath="$PROJECT_DIR$/stop.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +61,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/images" />
+      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/docker/portfolio" />
     </key>
   </component>
@@ -88,7 +88,8 @@
       <workItem from="1753454788865" duration="767000" />
       <workItem from="1755175176835" duration="1172000" />
       <workItem from="1755266005518" duration="3532000" />
-      <workItem from="1758289381793" duration="3123000" />
+      <workItem from="1758289381793" duration="5538000" />
+      <workItem from="1758888418209" duration="5071000" />
     </task>
     <task id="LOCAL-00001" summary="resolving git skill issues">
       <option name="closed" value="true" />
@@ -106,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755268257362</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Pivot to dog-walking site, update dockerfile, docker-compose.yml and nginx config">
+      <option name="closed" value="true" />
+      <created>1758294890831</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1758294890831</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +124,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="resolving git skill issues" />
     <MESSAGE value="add docker-compose file, simplify dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="add docker-compose file, simplify dockerfile" />
+    <MESSAGE value="Pivot to dog-walking site, update dockerfile, docker-compose.yml and nginx config" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pivot to dog-walking site, update dockerfile, docker-compose.yml and nginx config" />
   </component>
 </project>
