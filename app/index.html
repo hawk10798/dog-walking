@@ -19,7 +19,7 @@
         <p class="text-green-200">&copy; 2025 Happy Paws. All rights reserved.</p>
       </div>
     </footer>
-    <button id="scrollToTopBtn" class="hidden fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-110 focus:outline-none">
+    <button id="scrollToTopBtn" @click="scrollToTop" v-if="showScrollToTop" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-110 focus:outline-none">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
       </svg>

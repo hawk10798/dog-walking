@@ -3,10 +3,20 @@ const { createApp } = Vue;
 const app = createApp({
   data() {
     return {
-      currentPage: 'home'
+      currentPage: 'home',
+      showScrollToTop: false
     };
   },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
   methods: {
+    handleScroll() {
+      this.showScrollToTop = window.scrollY > (document.body.scrollHeight / 4);
+    },
     navigate(page) {
       this.currentPage = page;
     },
@@ -25,15 +35,19 @@ const app = createApp({
 
 app.component('header-component', {
   template: `
-    <header class="bg-gradient-to-r from-green-800 to-green-900 text-white py-8 shadow-xl">
+    <header class="bg-gradient-to-r from-green-800 to-green-900 text-white py-4 shadow-xl">
       <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center">
-          <div>
-            <h1 class="text-4xl font-extrabold tracking-tight"><a href="#" @click.prevent="$emit('navigate', 'home')">Happy Paws Dog Walking</a></h1>
-            <p class="text-xl mt-2 text-green-200">Where every walk is a tail-wagging adventure!</p>
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+          <div class="flex items-center justify-center">
+              <a href="#" @click.prevent="$emit('navigate', 'home')" class="flex items-center text-center md:text-left">
+                <img src="images/logo2.png" alt="Happy Paws Logo" class="h-12 md:h-16 mr-4">
+                <div>
+                  <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight">Happy Paws Dog Walking</h1>
+                  <p class="hidden md:block text-xl mt-2 text-green-200">Where every walk is a tail-wagging adventure!</p>
+                </div>
+              </a>
           </div>
-          <div class="flex items-center space-x-8">
-            <a href="#" @click.prevent="$emit('navigate', 'book')" class="bg-yellow-400 text-green-900 px-6 py-2 rounded-full shadow-lg hover:bg-yellow-300 transition duration-300 transform hover:scale-105 font-semibold whitespace-nowrap">Book Now</a>
+          <div class="flex flex-col md:flex-row items-center mt-4 md:mt-0 md:space-x-8">
             <div class="flex space-x-6" id="social-icons">
               <a href="#" class="text-white hover:text-green-200 transition duration-300 transform hover:scale-110">
                 <i class="fab fa-facebook-f fa-2x"></i>
@@ -48,6 +62,7 @@ app.component('header-component', {
                 <i class="fas fa-envelope fa-2x"></i>
               </a>
             </div>
+            <a href="#" @click.prevent="$emit('navigate', 'book')" class="bg-yellow-400 text-green-900 px-6 py-2 rounded-full shadow-lg hover:bg-yellow-300 transition duration-300 transform hover:scale-105 font-semibold whitespace-nowrap mt-4 md:mt-0">Book Now</a>
           </div>
         </div>
       </div>
