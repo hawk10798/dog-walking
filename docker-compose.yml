@@ -1,9 +1,8 @@
-version: '3.8'
 services:
   web:
     build: .
     ports:
-      - "8080:80"
+      - "3000:80"
     #Mounts local app directory to container,
     #so changes made locally are reflected in
     #the container without rebuilding

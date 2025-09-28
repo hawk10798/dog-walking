@@ -95,14 +95,14 @@ app.component('home-component', {
           <img src="images/harry.jpg" alt="Dog Walker 1" class="w-64 rounded-full border-6 border-green-900 mb-8 md:mb-0 md:mr-12 shadow-2xl ring-8 ring-yellow-300 ring-opacity-50">
           <div>
             <h3 class="text-3xl font-bold mb-4 text-green-900">Harry</h3>
-            <p class="text-xl text-gray-800 mb-4 leading-relaxed">Growing up with a Border Terrier in the house, I've always understood the unique joy and unconditional love a dog brings into a home. My lifelong passion for canines extends beyond just one breed; I have a genuine love for dogs of all shapes, sizes, and temperaments. For me, a walk is more than just exercise—it's a chance to bond, explore, and ensure every pup feels safe and happy. My calm, adaptable approach means your furry family member, whether a quiet lapdog or a boisterous hound, is in caring, experienced hands.</p>
+            <p class="text-xl text-gray-800 mb-4 leading-relaxed">"Growing up with a Border Terrier in the house, I've always understood the unique joy and unconditional love a dog brings into a home. My lifelong passion for canines extends beyond just one breed; I have a genuine love for dogs of all shapes, sizes, and temperaments. For me, a walk is more than just exercise—it's a chance to bond, explore, and ensure every pup feels safe and happy. My calm, adaptable approach means your furry family member, whether a quiet lapdog or a boisterous hound, is in caring, experienced hands"</p>
           </div>
         </div>
         <div class="flex flex-col md:flex-row-reverse items-center bg-gradient-to-br from-yellow-100 via-yellow-200 to-yellow-300 rounded-3xl shadow-2xl p-12 border-t-8 border-green-900 transform hover:scale-105 transition duration-500">
           <img src="images/junaid.jpg" alt="Dog Walker 2" class="w-64 rounded-full border-6 border-green-900 mb-8 md:mb-0 md:ml-12 shadow-2xl ring-8 ring-yellow-300 ring-opacity-50">
           <div>
             <h3 class="text-3xl font-bold mb-4 text-green-900">Junaid</h3>
-            <p class="text-xl text-gray-800 mb-4 leading-relaxed">As a nurse, I've dedicated my life to caring for others, and that same gentle patience and attention to detail extends to every dog I walk. I have a natural knack for reading canine body language, which helps me understand exactly what your dog needs, whether it's a calm moment or an exciting game of fetch. My calm, caring demeanor helps dogs feel instantly at ease, and I love creating a special bond with each one. I truly believe that a happy, healthy dog starts with someone who listens carefully to what they're trying to say.</p>
+            <p class="text-xl text-gray-800 mb-4 leading-relaxed">"As a nurse, I've dedicated my life to caring for others, and that same gentle patience and attention to detail extends to every dog I walk. I have a natural knack for reading canine body language, which helps me understand exactly what your dog needs, whether it's a calm moment or an exciting game of fetch. My calm, caring demeanor helps dogs feel instantly at ease, and I love creating a special bond with each one. I truly believe that a happy, healthy dog starts with someone who listens carefully to what they're trying to say"</p>
           </div>
         </div>
       </section>
