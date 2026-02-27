@@ -1,10 +1,12 @@
 ---
+import { Image } from 'astro:assets';
+import logo from '../assets/images/logo2.png';
 ---
 
 <div class="bg-gradient-to-r from-purple-700 to-indigo-600 p-5 md:p-10">
 	<div class="max-w-5xl mx-auto">
 		<section class="text-center">
-			<h1 class="text-4xl md:text-6xl font-bold text-white mb-5">🐕 Happy Paws Dog Walking</h1>
+			<h1 class="text-4xl md:text-6xl font-bold text-white mb-5"><Image src={logo} alt="Happy Paws Logo" class="inline-block h-16 w-16 align-middle" /> Happy Paws Dog Walking</h1>
 			<p class="text-lg md:text-xl text-white text-opacity-90">Professional dog walking services in your neighborhood</p>
 		</section>
 	</div>
