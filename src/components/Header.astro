@@ -3,11 +3,82 @@ import { Image } from 'astro:assets';
 import logo from '../assets/images/logo2.png';
 ---
 
-<div class="bg-gradient-to-r from-green-700 to-green-600 p-4 md:p-10">
+<div class="bg-gradient-to-r from-green-700 to-green-600 p-4 md:p-10 relative">
 	<div class="max-w-5xl mx-auto px-2 md:px-5">
+		<!-- Hamburger Menu Button -->
+		<div class="absolute top-4 right-4 md:hidden">
+			<button
+				id="hamburger-btn"
+				class="text-white p-2 focus:outline-none focus:ring-2 focus:ring-white rounded"
+				aria-label="Toggle menu"
+				aria-expanded="false"
+				aria-controls="dropdown-menu"
+			>
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+				</svg>
+			</button>
+		</div>
+
+		<!-- Dropdown Menu -->
+		<div
+			id="dropdown-menu"
+			class="absolute top-16 right-4 bg-green-800 rounded-md shadow-lg w-48 py-2 hidden md:hidden z-50"
+		>
+			<a href="/" class="block px-4 py-2 text-white hover:bg-green-700 transition-colors">Home</a>
+			<a href="/book" class="block px-4 py-2 text-white hover:bg-green-700 transition-colors">Book a Walk</a>
+			<a href="#" class="block px-4 py-2 text-white hover:bg-green-700 transition-colors">About Us</a>
+			<a href="/contact" class="block px-4 py-2 text-white hover:bg-green-700 transition-colors">Contact</a>
+		</div>
+
 		<section class="text-center">
-			<h1 class="text-2xl sm:text-3xl md:text-6xl font-bold text-white mb-3 md:mb-5 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3"><Image src={logo} alt="Happy Paws Logo" class="inline-block h-12 sm:h-14 md:h-16 w-12 sm:w-14 md:w-16 align-middle" /> <span>Happy Paws Dog Walking</span></h1>
-			<p class="text-base md:text-xl text-white text-opacity-90">Professional dog walking services in your neighborhood</p>
+			<a href="/" class="inline-block hover:opacity-90 transition-opacity">
+				<h1 class="text-2xl sm:text-3xl md:text-6xl font-bold text-white mb-3 md:mb-5 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3"><Image src={logo} alt="Happy Paws Logo" class="inline-block h-12 sm:h-14 md:h-16 w-12 sm:w-14 md:w-16 align-middle" /> <span>Happy Paws Dog Walking</span></h1>
+			</a>
+			<p class="hidden md:block text-base md:text-xl text-white text-opacity-90">Professional dog walking services in your neighborhood</p>
 		</section>
 	</div>
 </div>
+
+<style>
+	#dropdown-menu.active {
+		display: block;
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const hamburgerBtn = document.getElementById('hamburger-btn');
+		const dropdownMenu = document.getElementById('dropdown-menu');
+
+		hamburgerBtn?.addEventListener('click', () => {
+			const isOpen = dropdownMenu?.classList.contains('active');
+			if (isOpen) {
+				dropdownMenu?.classList.remove('active');
+				hamburgerBtn?.setAttribute('aria-expanded', 'false');
+			} else {
+				dropdownMenu?.classList.add('active');
+				hamburgerBtn?.setAttribute('aria-expanded', 'true');
+			}
+		});
+
+		// Close menu when a link is clicked
+		const menuLinks = dropdownMenu?.querySelectorAll('a');
+		menuLinks?.forEach((link) => {
+			link.addEventListener('click', () => {
+				dropdownMenu?.classList.remove('active');
+				hamburgerBtn?.setAttribute('aria-expanded', 'false');
+			});
+		});
+
+		// Close menu when clicking outside
+		document.addEventListener('click', (event) => {
+			const isClickInsideMenu = dropdownMenu?.contains(event.target as Node);
+			const isClickOnButton = hamburgerBtn?.contains(event.target as Node);
+			if (!isClickInsideMenu && !isClickOnButton && dropdownMenu?.classList.contains('active')) {
+				dropdownMenu?.classList.remove('active');
+				hamburgerBtn?.setAttribute('aria-expanded', 'false');
+			}
+		});
+	});
+</script>
