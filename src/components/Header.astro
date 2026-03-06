@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import logo from '../assets/images/logo2.png';
 ---
 
 <div class="bg-gradient-to-r from-green-700 to-green-600 p-4 md:p-10 relative">
@@ -33,7 +31,10 @@ import logo from '../assets/images/logo2.png';
 
 		<section class="text-center">
 			<a href="/" class="inline-block hover:opacity-90 transition-opacity">
-				<h1 class="text-2xl sm:text-3xl md:text-6xl font-bold text-white mb-3 md:mb-5 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3"><Image src={logo} alt="Happy Paws Logo" class="inline-block h-12 sm:h-14 md:h-16 w-12 sm:w-14 md:w-16 align-middle" /> <span>Happy Paws Dog Walking</span></h1>
+				<h1 class="text-2xl sm:text-3xl md:text-6xl font-bold text-white mb-3 md:mb-5 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
+					<img src="/logo2.png" alt="Happy Paws Logo" class="inline-block h-12 sm:h-14 md:h-16 w-12 sm:w-14 md:w-16 align-middle" /> 
+					<span>Happy Paws Dog Walking</span>
+				</h1>
 			</a>
 			<p class="hidden md:block text-base md:text-xl text-white text-opacity-90">Professional dog walking services in your neighborhood</p>
 		</section>

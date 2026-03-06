@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import groupPhoto from '../assets/images/group-photo.jpg';
+import groupPhoto from '../public/group-photo.jpg';
 ---
 
 <div class="min-h-screen bg-stone-100 p-5 md:p-10">
@@ -8,7 +8,7 @@ import groupPhoto from '../assets/images/group-photo.jpg';
 		<section class="bg-stone-50 rounded-2xl shadow-lg mb-12">
 			<div class="flex flex-col md:flex-row items-center">
 				<div class="w-full md:w-1/2">
-					<Image src={groupPhoto} alt="Happy Paws Team" class="w-full h-auto rounded-t-2xl md:rounded-l-2xl md:rounded-t-none shadow-lg" />
+					<img src="/group-photo.jpg" alt="Happy Paws Team" class="w-full h-auto rounded-t-2xl md:rounded-l-2xl md:rounded-t-none shadow-lg" />
 				</div>
 				<div class="w-full md:w-1/2 p-6 md:p-10 flex flex-col items-center justify-center">
 					<h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">About Our Team</h2>
