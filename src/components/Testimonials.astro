@@ -1,0 +1,42 @@
+---
+import TestimonialCard from './TestimonialCard.astro';
+
+interface Testimonial {
+	name: string;
+	initials: string;
+	review: string;
+}
+
+const testimonials: Testimonial[] = [
+	{
+		name: "Sarah M.",
+		initials: "SM",
+		review: "Happy Paws has been a lifesaver for my busy schedule. My golden retriever, Buddy, absolutely adores his daily walks and always comes home happy and tired. The team sends me photos throughout the walk which I love!"
+	},
+	{
+		name: "James R.",
+		initials: "JR",
+		review: "I was nervous about leaving my rescue dog with someone new, but the Happy Paws team made both of us feel completely at ease. Their patience and professionalism are outstanding. Highly recommend!"
+	},
+	{
+		name: "Emma K.",
+		initials: "EK",
+		review: "The group walks have been fantastic for my two dogs' socialization. They come home tired, happy, and have made new furry friends along the way. Great value for money too!"
+	}
+];
+---
+
+<div class="py-8 md:py-12">
+	<div class="max-w-5xl mx-auto px-4">
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			{testimonials.map((testimonial) => (
+				<TestimonialCard 
+					name={testimonial.name}
+					initials={testimonial.initials}
+					review={testimonial.review}
+					size="small"
+				/>
+			))}
+		</div>
+	</div>
+</div>

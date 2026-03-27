@@ -1,0 +1,63 @@
+---
+import TestimonialCard from './TestimonialCard.astro';
+
+interface Testimonial {
+	name: string;
+	initials: string;
+	review: string;
+}
+
+const allTestimonials: Testimonial[] = [
+	{
+		name: "Sarah M.",
+		initials: "SM",
+		review: "Happy Paws has been a lifesaver for my busy schedule. My golden retriever, Buddy, absolutely adores his daily walks and always comes home happy and tired. The team sends me photos throughout the walk which I love!"
+	},
+	{
+		name: "James R.",
+		initials: "JR",
+		review: "I was nervous about leaving my rescue dog with someone new, but the Happy Paws team made both of us feel completely at ease. Their patience and professionalism are outstanding. Highly recommend!"
+	},
+	{
+		name: "Emma K.",
+		initials: "EK",
+		review: "The group walks have been fantastic for my two dogs' socialization. They come home tired, happy, and have made new furry friends along the way. Great value for money too!"
+	},
+	{
+		name: "Michael T.",
+		initials: "MT",
+		review: "I've tried several dog walking services, but Happy Paws is by far the best. The walkers are reliable, communicative, and truly care about the dogs in their care. My border collie gets so excited when the van arrives!"
+	},
+	{
+		name: "Lisa P.",
+		initials: "LP",
+		review: "The peace of mind knowing my elderly lab is in good hands during the day has been invaluable. The team accommodates her slower pace and makes sure she gets the exercise she needs without overdoing it."
+	},
+	{
+		name: "David H.",
+		initials: "DH",
+		review: "Flexible scheduling and great communication make this service stand out. They once rearranged a walk last minute when I had an emergency and didn't charge extra. That's customer service!"
+	},
+	{
+		name: "Rachel B.",
+		initials: "RB",
+		review: "My French Bulldog can be stubborn, but the Happy Paws team knows exactly how to handle him. He pulls at his leash with excitement every time he sees them now. So glad we found this service!"
+	},
+	{
+		name: "Tom W.",
+		initials: "TW",
+		review: "The live GPS tracking and photo updates are fantastic. I work long hours but never worry about my pup because I can see exactly what they're up to. Worth every penny!"
+	}
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+	{allTestimonials.map((testimonial) => (
+		<TestimonialCard 
+			name={testimonial.name}
+			initials={testimonial.initials}
+			review={testimonial.review}
+			size="large"
+		/>
+	))}
+</div>
