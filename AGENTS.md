@@ -10,14 +10,14 @@ This is an Astro project, a modern static site builder that uses UI components f
 -   **Key Technologies:**
     -   Astro (v5.17.1)
     -   Tailwind CSS (v4.2.1)
-    -   Bun (bun.lock indicates its usage for dependency management, though `npm` commands are listed in `package.json`)
+    -   Node.js with npm for dependency management
 
 ## 2. Getting Started
 
 To get started with this project, follow these steps:
 
 ### Setup
-The `bun.lock` file suggests Bun is used for dependency management. However, the `package.json` scripts use `npm`. For consistency with the `package.json` scripts, `npm` commands are listed below. If Bun is preferred, equivalent `bun` commands should be used (e.g., `bun install` instead of `npm install`).
+The project uses Node.js with npm for dependency management.
 
 ```sh
 # Install dependencies
