@@ -1,56 +1,52 @@
 ---
-import AmberDivider from './AmberDivider.astro';
 ---
 
-<div class="bg-gradient-to-b from-green-900 via-green-800 to-emerald-900 p-4 md:p-10 relative overflow-hidden">
-	<div class="absolute inset-0 opacity-10 pointer-events-none">
-		<svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-			<pattern id="leaves" patternUnits="userSpaceOnUse" width="50" height="50">
-				<path d="M25 5 Q30 15 25 25 Q20 15 25 5" fill="currentColor" class="text-green-200"/>
-				<path d="M10 30 Q15 40 10 50 Q5 40 10 30" fill="currentColor" class="text-green-200" transform="rotate(45 10 40)"/>
-				<path d="M40 35 Q45 45 40 55 Q35 45 40 35" fill="currentColor" class="text-green-200" transform="rotate(-30 40 45)"/>
-			</pattern>
-			<rect width="100%" height="100%" fill="url(#leaves)"/>
-		</svg>
-	</div>
-	<div class="max-w-5xl mx-auto px-2 md:px-5 relative">
-		<div class="absolute top-4 right-4 md:hidden">
-			<button
-				id="hamburger-btn"
-				class="text-stone-100 p-2 focus:outline-none focus:ring-2 focus:ring-stone-200 rounded-lg hover:bg-green-700 transition-colors"
-				aria-label="Toggle menu"
-				aria-expanded="false"
-				aria-controls="dropdown-menu"
-			>
-				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-				</svg>
-			</button>
+<div class="sticky top-0 z-50 bg-gradient-to-b from-green-900 via-green-800 to-emerald-900">
+	<div class="relative overflow-hidden">
+		<div class="absolute inset-0 opacity-10 pointer-events-none">
+			<svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+				<pattern id="leaves" patternUnits="userSpaceOnUse" width="50" height="50">
+					<path d="M25 5 Q30 15 25 25 Q20 15 25 5" fill="currentColor" class="text-green-200"/>
+					<path d="M10 30 Q15 40 10 50 Q5 40 10 30" fill="currentColor" class="text-green-200" transform="rotate(45 10 40)"/>
+					<path d="M40 35 Q45 45 40 55 Q35 45 40 35" fill="currentColor" class="text-green-200" transform="rotate(-30 40 45)"/>
+				</pattern>
+				<rect width="100%" height="100%" fill="url(#leaves)"/>
+			</svg>
 		</div>
 
-		<div
-			id="dropdown-menu"
-			class="absolute top-16 right-4 bg-emerald-800 rounded-xl shadow-xl w-48 py-3 hidden md:hidden z-50 border border-emerald-700"
-		>
-			<a href="/" class="block px-4 py-3 text-stone-100 hover:bg-emerald-700 transition-colors rounded-lg mx-2">Home</a>
-			<a href="/book" class="block px-4 py-3 text-stone-100 hover:bg-emerald-700 transition-colors rounded-lg mx-2">Book a Walk</a>
-			<a href="/testimonials" class="block px-4 py-3 text-stone-100 hover:bg-emerald-700 transition-colors rounded-lg mx-2">Reviews</a>
-			<a href="/contact" class="block px-4 py-3 text-stone-100 hover:bg-emerald-700 transition-colors rounded-lg mx-2">Contact</a>
+		<div class="relative max-w-5xl mx-auto px-4 md:px-6">
+			<div class="flex items-center justify-between py-4 md:py-6">
+				<a href="/" class="flex items-center gap-2 sm:gap-3 hover:opacity-90 transition-opacity">
+					<img src="/logo2.png" alt="Happy Paws Logo" class="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
+					<span class="text-base sm:text-lg md:text-2xl lg:text-3xl font-bold text-stone-100 drop-shadow-md">Happy Paws Dog Walking</span>
+				</a>
+				<button
+					id="hamburger-btn"
+					class="text-stone-100 p-2 focus:outline-none focus:ring-2 focus:ring-stone-200 rounded-lg hover:bg-green-700 transition-colors md:hidden flex-shrink-0"
+					aria-label="Toggle menu"
+					aria-expanded="false"
+					aria-controls="dropdown-menu"
+				>
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
+			</div>
 		</div>
-
-		<section class="text-center">
-			<a href="/" class="inline-block hover:opacity-90 transition-opacity">
-				<h1 class="text-2xl sm:text-3xl md:text-6xl font-bold text-stone-100 mb-3 md:mb-5 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
-					<img src="/logo2.png" alt="Happy Paws Logo" class="inline-block h-12 sm:h-14 md:h-16 w-12 sm:w-14 md:w-16 align-middle" /> 
-					<span class="drop-shadow-md">Happy Paws Dog Walking</span>
-				</h1>
-			</a>
-			<p class="hidden md:block text-base md:text-xl text-stone-200 italic">Professional dog walking services in your neighborhood</p>
-		</section>
 	</div>
+
+	<div
+		id="dropdown-menu"
+		class="absolute left-4 right-4 md:left-auto md:right-4 bg-emerald-800 rounded-xl shadow-xl w-auto md:w-48 py-3 hidden md:hidden z-50 border border-emerald-700"
+	>
+		<a href="/" class="block px-4 py-3 text-stone-100 hover:bg-emerald-700 transition-colors rounded-lg mx-2">Home</a>
+		<a href="/book" class="block px-4 py-3 text-stone-100 hover:bg-emerald-700 transition-colors rounded-lg mx-2">Book a Walk</a>
+		<a href="/testimonials" class="block px-4 py-3 text-stone-100 hover:bg-emerald-700 transition-colors rounded-lg mx-2">Reviews</a>
+		<a href="/contact" class="block px-4 py-3 text-stone-100 hover:bg-emerald-700 transition-colors rounded-lg mx-2">Contact</a>
+	</div>
+
+	<div class="h-3 bg-gradient-to-r from-amber-800 via-amber-700 to-amber-800"></div>
 </div>
-
-<AmberDivider />
 
 <style>
 	#dropdown-menu.active {
